@@ -1,8 +1,10 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { CssBaseline, ThemeProvider } from "@material-ui/core"
 
 import Header from "./Header"
 import "./layout.css"
+import theme from "./Styles"
 
 type LayoutProps = {
   children: JSX.Element
@@ -20,7 +22,8 @@ function Layout({ children }: LayoutProps) {
   `)
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -36,7 +39,7 @@ function Layout({ children }: LayoutProps) {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-    </>
+    </ThemeProvider>
   )
 }
 
