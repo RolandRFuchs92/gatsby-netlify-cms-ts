@@ -6,6 +6,17 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "landingScreen"
+    label: "Landing Screen"
+    folder: "content/landingScreen"
+    create: false
+    editor:
+      preview: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Caption", name: "caption", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
