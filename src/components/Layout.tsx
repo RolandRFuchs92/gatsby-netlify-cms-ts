@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { CssBaseline, ThemeProvider } from "@material-ui/core"
+import "typeface-nixie-one"
 
 import Header from "./Header"
 import "./layout.css"

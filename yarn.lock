@@ -14994,6 +14994,11 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typeface-nixie-one@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/typeface-nixie-one/-/typeface-nixie-one-0.0.72.tgz#3ec74bd7567eeb34098c78ce4fc30970d00b34cf"
+  integrity sha512-DSJb9j6NQj2kFmEyBJK8cXBAYu+p3vl3MV4p9aKNSrr8HToeR+VlL0jVa+68NlXpAJzjoiCjeTxlhBWmpYQfWg==
+
 ua-parser-js@^0.7.18:
   version "0.7.21"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
