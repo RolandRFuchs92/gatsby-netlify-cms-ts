@@ -6,18 +6,22 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "landingScreen"
-    label: "Landing Screen"
-    file: "content/home/landingScreen.md"
-    create: false
-    delete: false
-    editor:
-      preview: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Caption", name: "caption", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
+  - name: "homePage"
+    label: "Home page"
+    files:
+      - label: "Landing Screen"
+        name: "landingScreen"
+        file: "content/home/landingScreen.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Caption", name: "caption", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+
+    #  create: false
+    # delete: false
+    # editor:
+    #   preview: true
+    # slug: "{{slug}}"
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
