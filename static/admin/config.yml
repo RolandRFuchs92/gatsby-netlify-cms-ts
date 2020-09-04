@@ -8,8 +8,9 @@ public_folder: /img
 collections:
   - name: "landingScreen"
     label: "Landing Screen"
-    folder: "content/landingScreen"
+    file: "content/home/landingScreen.md"
     create: false
+    delete: false
     editor:
       preview: true
     slug: "{{slug}}"
