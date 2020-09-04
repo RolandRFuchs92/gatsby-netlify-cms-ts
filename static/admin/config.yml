@@ -16,12 +16,6 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Caption", name: "caption", widget: "string" }
           - { label: "Description", name: "description", widget: "string" }
-
-    #  create: false
-    # delete: false
-    # editor:
-    #   preview: true
-    # slug: "{{slug}}"
   - name: "blog"
     label: "Blog"
     folder: "content/blog"

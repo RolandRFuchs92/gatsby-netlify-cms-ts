@@ -30,15 +30,17 @@ export default function LandingScreenTemplate() {
   return (
     <Box height="100vh">
       <Grid container justify="center">
-        <Grid item xs={12}>
-          <Box height={600}>
+        <Grid container item xs={12} justify="center">
+          <Box width={600}>
             <Image />
           </Box>
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="h4" align="center">
-            {title}
-          </Typography>
+          <Box m={3}>
+            <Typography variant="h4" align="center">
+              {title}
+            </Typography>
+          </Box>
         </Grid>
         <Grid item xs={12}>
           <Typography variant="h5" align="center">
