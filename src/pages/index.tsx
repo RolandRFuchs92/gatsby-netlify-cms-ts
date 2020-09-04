@@ -5,6 +5,8 @@ import SEO from "../components/Seo"
 import PostLink from "../components/PostLink"
 
 import LandingScreenTemplate from "../templates/LandingScreenTemplate"
+import SideCardTemplate from "../templates/SideCardTemplate"
+import Products from "../templates/ProductsTemplate"
 
 import { graphql } from "gatsby"
 
@@ -17,6 +19,8 @@ const IndexPage = ({
     <>
       <SEO title="Home" />
       <LandingScreenTemplate />
+      <SideCardTemplate />
+      <Products />
     </>
   </Layout>
 )
