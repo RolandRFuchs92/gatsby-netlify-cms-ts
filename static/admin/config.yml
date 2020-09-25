@@ -21,17 +21,28 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Caption", name: "caption", widget: "string" }
           - { label: "Description", name: "description", widget: "string" }
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: "products"
+    label: "Products"
+    folder: "content/home/products"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "blog"
+      label: "Blog"
+      folder: "content/blog"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: false
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Slug", name: "slug", widget: "string" }
+        - { label: "Tags", name: "tags", widget: "list" }
+        - { label: "Body", name: "body", widget: "markdown" }

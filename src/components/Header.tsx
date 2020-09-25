@@ -9,7 +9,7 @@ type HeaderProp = {
 
 function Header({ siteTitle }: HeaderProp) {
   return (
-    <AppBar position="sticky" color="transparent" elevation={0}>
+    <AppBar position="sticky" color="white" elevation={0}>
       <Toolbar>
         <Grid container justify="center">
           <Grid item>{siteTitle}</Grid>

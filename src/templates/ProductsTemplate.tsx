@@ -1,27 +1,27 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { Grid, Typography, Box } from "@material-ui/core"
+import { useStaticQuery, graphql } from "gatsby"
+
 import Image from "../components/images/FancyFood"
+import PortraitCard from "../components/PortraitCard"
 
 export default function LandingScreenTemplate() {
   const {
-    allMarkdownRemark: {
-      nodes: [
-        {
-          frontmatter: { title, caption, description },
-        },
-      ],
-    },
+    allMarkdownRemark: { edges: products },
   } = useStaticQuery(graphql`
-    query {
+    query products {
       allMarkdownRemark(
-        filter: { frontmatter: { slug: { eq: "landingScreen" } } }
+        filter: { frontmatter: { slug: { in: ["humus", "pesto"] } } }
       ) {
-        nodes {
-          frontmatter {
-            title
-            caption
-            description
+        edges {
+          node {
+            frontmatter {
+              path
+              image
+              title
+              caption
+            }
+            html
           }
         }
       }
@@ -29,31 +29,37 @@ export default function LandingScreenTemplate() {
   `)
 
   return (
-    <Box height="100vh">
+    <Box height="50vh">
       <Grid
         container
         justify="center"
         alignContent="center"
         alignItems="center"
       >
-        <Grid item xs={6}>
-          <Box m={3} height="75vh">
-            <Image />
+        <Grid item xs={12}>
+          <Box m={2}>
+            <Typography variant="h3" align="center">
+              Products
+            </Typography>
           </Box>
         </Grid>
-        <Grid item xs={6}>
-          <Box m={3}>
-            <Typography variant="h4" align="center">
-              {title}
-            </Typography>
-            <Typography variant="caption" align="center" component="div">
-              {caption}
-            </Typography>
-          </Box>
-
-          <Typography variant="body1" align="center">
-            {description}
+        <Grid item xs={12}>
+          <Typography variant="h4" align="center">
+            Snacky-Snack
           </Typography>
+        </Grid>
+        <Grid container item xs={12}>
+          {products.map(({ node: { frontmatter, html } }: any) => {
+            debugger
+            return (
+              <PortraitCard
+                image={frontmatter.image}
+                heading={frontmatter.heading}
+                caption={frontmatter.caption}
+                markdown={html}
+              />
+            )
+          })}
         </Grid>
       </Grid>
     </Box>

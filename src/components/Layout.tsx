@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { CssBaseline, ThemeProvider } from "@material-ui/core"
+import { CssBaseline, ThemeProvider, Grid } from "@material-ui/core"
 import "typeface-nixie-one"
 
 import Header from "./Header"
@@ -26,20 +26,14 @@ function Layout({ children }: LayoutProps) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Grid container justify="center" direction="column">
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
+      </Grid>
     </ThemeProvider>
   )
 }
