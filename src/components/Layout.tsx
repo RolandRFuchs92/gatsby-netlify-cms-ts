@@ -6,6 +6,7 @@ import "typeface-nixie-one"
 import Header from "./Header"
 import "./layout.css"
 import theme from "./Styles"
+import "./appStyles.css"
 
 type LayoutProps = {
   children: JSX.Element

@@ -48,19 +48,23 @@ export default function LandingScreenTemplate() {
             Snacky-Snack
           </Typography>
         </Grid>
-        <Grid container item xs={12}>
-          {products.map(({ node: { frontmatter, html } }: any) => {
-            debugger
-            return (
-              <PortraitCard
-                image={frontmatter.image}
-                heading={frontmatter.heading}
-                caption={frontmatter.caption}
-                markdown={html}
-              />
-            )
-          })}
-        </Grid>
+        <Box mt={5}>
+          <Grid container justify="center" spacing={3}>
+            {products.map(({ node: { frontmatter, html } }: any) => {
+              return (
+                <Grid item>
+                  <PortraitCard
+                    image={frontmatter.image}
+                    heading={frontmatter.heading}
+                    caption={frontmatter.caption}
+                    title={frontmatter.title}
+                    markdown={html}
+                  />
+                </Grid>
+              )
+            })}
+          </Grid>
+        </Box>
       </Grid>
     </Box>
   )
