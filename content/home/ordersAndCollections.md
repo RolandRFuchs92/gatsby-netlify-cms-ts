@@ -5,10 +5,6 @@ image: ordersAndCollections.jpg
 description: its so moist and delicious
 path: /home/orders.md
 slug: orders&collection
-classes: 
-  .ordersAndCollectionsMarkdownContainer {
-    backgroundColor: green;
-  }
 ---
 
 ## ORDERS & COLLECTION

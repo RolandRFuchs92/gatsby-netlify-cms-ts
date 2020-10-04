@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master
+  local_backend: true
 
 media_folder: static/img
 public_folder: /img
@@ -21,6 +22,16 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Caption", name: "caption", widget: "string" }
           - { label: "Description", name: "description", widget: "string" }
+      - name: "sitecss"
+        label: "Site Css"
+        file: "content/home/styles.json"
+        fields:
+          - {
+              label: "Css",
+              name: "styles",
+              widget: "code",
+              default_language: "css",
+            }
   - name: "products"
     label: "Products"
     folder: "content/home/products"
@@ -32,22 +43,3 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "blog"
-      label: "Blog"
-      folder: "content/blog"
-      create: true
-      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-      editor:
-        preview: false
-      fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string" }
-        - { label: "Tags", name: "tags", widget: "list" }
-        - { label: "Body", name: "body", widget: "markdown" }
-  - name: "sitecss"
-    label: "Site Css"
-    file: 'content/styles.json'
-    fields: 
-      - { label: "Css", name: "styles", widget: "string"}

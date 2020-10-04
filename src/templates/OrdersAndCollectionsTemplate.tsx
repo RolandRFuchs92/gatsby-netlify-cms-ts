@@ -65,11 +65,6 @@ export default function OrdersAndCollectionsTemplate() {
             </div>
           </Box>
         </Grid>
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `.ordersAndCollectionsMarkdownContainer {background-color: green;}`,
-          }}
-        />
       </Grid>
     </Box>
   )
