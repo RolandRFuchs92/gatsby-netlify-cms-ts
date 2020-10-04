@@ -37,7 +37,7 @@ export default function LandingScreenTemplate() {
         alignItems="center"
       >
         <Grid item xs={6}>
-          <Box m={3} height="75vh">
+          <Box m={3} height="75vh" data-sal="zoom-out">
             <Image />
           </Box>
         </Grid>

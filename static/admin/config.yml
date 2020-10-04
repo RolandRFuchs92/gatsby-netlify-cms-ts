@@ -46,3 +46,8 @@ collections:
         - { label: "Slug", name: "slug", widget: "string" }
         - { label: "Tags", name: "tags", widget: "list" }
         - { label: "Body", name: "body", widget: "markdown" }
+  - name: "sitecss"
+    label: "Site Css"
+    file: 'content/styles.json'
+    fields: 
+      - { label: "Css", name: "styles", widget: "string"}

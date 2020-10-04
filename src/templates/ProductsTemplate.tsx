@@ -29,7 +29,7 @@ export default function LandingScreenTemplate() {
   `)
 
   return (
-    <Box height="50vh">
+    <Box height="100vh">
       <Grid
         container
         justify="center"

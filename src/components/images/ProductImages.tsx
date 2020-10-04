@@ -33,7 +33,6 @@ export default function ProductsImage({
   `)
 
   const fluidImg = data.allImageSharp.edges.find((i: any) => {
-    debugger
     return new RegExp(image, "i").test(i.node.fluid.originalImg)
   }).node.fluid
   return <Img fluid={fluidImg} className={className} />

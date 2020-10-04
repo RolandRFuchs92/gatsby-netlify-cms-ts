@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
@@ -8,8 +9,7 @@ import LandingScreenTemplate from "../templates/LandingScreenTemplate"
 import SideCardTemplate from "../templates/SideCardTemplate"
 import ProductsTemplate from "../templates/ProductsTemplate"
 import OrdersAndCollectionsTemplate from "../templates/OrdersAndCollectionsTemplate"
-
-import { graphql } from "gatsby"
+import ContactUs from "../templates/ContactUs"
 
 const IndexPage = ({
   data: {
@@ -23,6 +23,7 @@ const IndexPage = ({
       <SideCardTemplate />
       <ProductsTemplate />
       <OrdersAndCollectionsTemplate />
+      <ContactUs />
     </>
   </Layout>
 )
