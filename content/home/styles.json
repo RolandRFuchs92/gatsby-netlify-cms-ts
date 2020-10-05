@@ -1,1 +1,6 @@
-{}
+{
+  "styles": {
+    "lang": "css",
+    "code": ".tickle {\n  background-color: blue;\n}"
+  }
+}
