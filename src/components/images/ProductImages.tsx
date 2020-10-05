@@ -33,7 +33,8 @@ export default function ProductsImage({
   `)
 
   const result = data.allImageSharp.edges.find((i: any) => {
-    return new RegExp(image, "i").test(i.node.fluid.originalImg)
+    const img = image.split("/").reverse()[0]
+    return new RegExp(img, "i").test(i.node.fluid.originalImg)
   })
   if (!result) return null
 
