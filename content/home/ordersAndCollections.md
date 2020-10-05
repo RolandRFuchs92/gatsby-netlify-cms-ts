@@ -1,7 +1,7 @@
 ---
 title: Orders & Collection
 caption: This is a caption
-image: /img/sidebar-1.jpg
+image: /src/images/ordersAndCollections.jpg
 description: its so moist and delicious
 path: /home/orders.md
 slug: orders&collection

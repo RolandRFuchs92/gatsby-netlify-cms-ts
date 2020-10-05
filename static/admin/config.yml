@@ -3,7 +3,7 @@ backend:
   branch: master
   repo: RolandRFuchs92/gatsby-netlify-cms-ts
 
-media_folder: src/images
+media_folder: /src/images
 public_folder: /img
 
 collections:
