@@ -32,6 +32,14 @@ collections:
               widget: "code",
               default_language: "css",
             }
+      - label: "Orders And Collections"
+        name: "ordersAndCollections"
+        file: "content/home/ordersAndCollections.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Caption", name: "caption", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
   - name: "products"
     label: "Products"
     folder: "content/home/products"
