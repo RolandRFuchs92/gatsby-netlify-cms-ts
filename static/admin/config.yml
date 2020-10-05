@@ -38,7 +38,13 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Caption", name: "caption", widget: "string" }
-          - { label: "Image", name: "image", widget: "image" }
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              default: "src/images/ordersAndCollections.jpg",
+              allow_multiple: false,
+            }
           - { label: "Body", name: "body", widget: "markdown" }
   - name: "products"
     label: "Products"
